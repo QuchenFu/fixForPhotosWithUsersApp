@@ -75,7 +75,7 @@ public class PhotoApplication {
 	 *
 	 * commentRepo.save( commentYouCreated );
      *
-     http://localhost:8080/comment/add?user=bob&content=hi
+     * http://localhost:8080/comment/add?user=bob&content=hi
 	 *
 	 * Step 6.
 	 *
@@ -86,8 +86,9 @@ public class PhotoApplication {
 	 *
 	 * commentRepo.findAll()
      *
-     http://localhost:8080/comments
-     [{"user":"admin","content":"hello"},{"user":"bob","content":"hi"},{"user":"Rob","content":"yo"}]
+     * http://localhost:8080/comments
+     *
+     * [{"user":"admin","content":"hello"},{"user":"bob","content":"hi"},{"user":"Rob","content":"yo"}]
 	 *
 	 * Step 7.
 	 *
@@ -119,7 +120,7 @@ public class PhotoApplication {
 	 * authentication details and passes you the details of who is logged
 	 * in and invoking the method.
      *
-     http://localhost:8080/comment/addToCurrentUser?content=hello
+     * http://localhost:8080/comment/addToCurrentUser?content=hello
      *
 	 **/
 
