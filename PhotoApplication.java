@@ -74,8 +74,8 @@ public class PhotoApplication {
 	 * construct a new Comment and then save it to the database by calling:
 	 *
 	 * commentRepo.save( commentYouCreated );
-     *
-     * http://localhost:8080/comment/add?user=bob&content=hi
+     	 *
+     	 * http://localhost:8080/comment/add?user=bob&content=hi
 	 *
 	 * Step 6.
 	 *
@@ -85,10 +85,10 @@ public class PhotoApplication {
 	 * from the database:
 	 *
 	 * commentRepo.findAll()
-     *
-     * http://localhost:8080/comments
-     *
-     * [{"user":"admin","content":"hello"},{"user":"bob","content":"hi"},{"user":"Rob","content":"yo"}]
+     	 *
+     	 * http://localhost:8080/comments
+     	 *
+     	 * [{"user":"admin","content":"hello"},{"user":"bob","content":"hi"},{"user":"Rob","content":"yo"}]
 	 *
 	 * Step 7.
 	 *
@@ -103,25 +103,25 @@ public class PhotoApplication {
 	 * You would rewrite it:
 	 *
 	 * public boolean addComment( String content, Principal user) ....
-     *
+     	 *
 	 * Instead of the string user parameter that was supplied to your Comment
-     * in the previous version, use the value of calling the .getName() method
-     * on the Principal object passed in:
-     *
-     * commentYouCreated.setUser(user.getName())
-     *
-     * This modification allows us to attach comments to the currently logged in
-     * user. Before, anyone could claim to be any user. This modification allows
-     * us to ensure that the Comment is attached to the currently loggedc in user
-     * that is sending the request.
-     *
+     	 * in the previous version, use the value of calling the .getName() method
+     	 * on the Principal object passed in:
+     	 *
+     	 * commentYouCreated.setUser(user.getName())
+     	 *
+     	 * This modification allows us to attach comments to the currently logged in
+     	 * user. Before, anyone could claim to be any user. This modification allows
+     	 * us to ensure that the Comment is attached to the currently loggedc in user
+     	 * that is sending the request.
+     	 *
 	 * The Principal object will automatically be populated with an object
 	 * representing the currently logged in user. Spring takes care of the
 	 * authentication details and passes you the details of who is logged
 	 * in and invoking the method.
-     *
-     * http://localhost:8080/comment/addToCurrentUser?content=hello
-     *
+     	 *
+     	 * http://localhost:8080/comment/addToCurrentUser?content=hello
+     	 *
 	 **/
 
 }
