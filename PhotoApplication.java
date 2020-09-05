@@ -43,7 +43,7 @@ public class PhotoApplication {
 	 *
 	 *
 	 *
-	 * Step 2.
+	 * Step 3.
 	 *
 	 * Repositories are how you save / query for objects from the database.
 	 *
@@ -52,13 +52,13 @@ public class PhotoApplication {
 	 * PhotoUrl with Comment. You can omit the method declaration.
 	 *
 	 *
-	 * Step 3.
+	 * Step 4.
 	 *
 	 * Create a new CommentController class. Make sure that your CommentController has the
 	 * @RestController annotation on the class declaration.
 	 *
 	 *
-	 * Step 4.
+	 * Step 5.
 	 *
 	 * Add a constructor to your CommentController that takes your CommentRepository as
 	 * a parameter. The constructor should have the @Autowired annotation above it. You
@@ -66,7 +66,7 @@ public class PhotoApplication {
 	 * your controller class. Inside of the constructor, set this member variable to the
 	 * CommentRepository instance passed into the constructor.
 	 *
-	 * Step 5.
+	 * Step 6.
 	 *
 	 * Add a method to your CommentController to add a comment
 	 * when a request is sent to /comment/add. Your method should take parameters
@@ -77,7 +77,7 @@ public class PhotoApplication {
      	 *
      	 * http://localhost:8080/comment/add?user=bob&content=hi
 	 *
-	 * Step 6.
+	 * Step 7.
 	 *
 	 * Add a method to your CommentController to list all comments saved
 	 * to the database when a request is sent to /comments. Your method
@@ -90,7 +90,7 @@ public class PhotoApplication {
      	 *
      	 * [{"user":"admin","content":"hello"},{"user":"bob","content":"hi"},{"user":"Rob","content":"yo"}]
 	 *
-	 * Step 7.
+	 * Step 8.
 	 *
 	 * Rewrite your method to add comments to remove the string user parameter
 	 * and replace it with a new user parameter of type java.security.Principal.
