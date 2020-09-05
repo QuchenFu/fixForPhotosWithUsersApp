@@ -88,7 +88,7 @@ public class PhotoApplication {
      	 *
      	 * http://localhost:8080/comments
      	 *
-     	 * [{"user":"admin","content":"hello"},{"user":"bob","content":"hi"},{"user":"Rob","content":"yo"}]
+     	 * [{"id":52,"user":"admin","content":"hello"},{"id":53,"user":"bob","content":"hi"}]
 	 *
 	 * Step 8.
 	 *
