@@ -48,7 +48,6 @@ public class PhotoApplicationTests {
         String result = mockMvc.perform(get("/comments"))
             .andExpect(status().isOk())
             .andReturn().getResponse().getContentAsString();
-        System.out.println(result);
         Assert.isTrue(result.equals("[{\"id\":52,\"user\":\"admin\",\"content\":\"hello\"},{\"id\":53,\"user\":\"bob\",\"content\":\"hi\"}]"));
     }
 
@@ -60,7 +59,6 @@ public class PhotoApplicationTests {
         String result = mockMvc.perform(get("/comments"))
             .andExpect(status().isOk())
             .andReturn().getResponse().getContentAsString();
-        System.out.println(result);
         Assert.isTrue(result.equals("[{\"id\":52,\"user\":\"admin\",\"content\":\"hello\"},{\"id\":53,\"user\":\"bob\",\"content\":\"hi\"},{\"id\":54,\"user\":\"Rob\",\"content\":\"yo\"}]"));
     }
 
