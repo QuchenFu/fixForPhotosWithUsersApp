@@ -121,6 +121,6 @@ public class PhotoApplication {
      *
      http://localhost:8080/comment/addToCurrentUser?content=hello
      *
-	 */
+	 **/
 
 }
