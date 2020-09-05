@@ -40,7 +40,7 @@ public class PhotoApplicationTests {
 
     @Test
     @WithMockUser(username = "admin", authorities = { "USER" })
-    public void testAddComment() throws Exception {
+    public void TestaddComment() throws Exception {
         mockMvc.perform(get("/comment/add?user=admin&content=hello"))
             .andExpect(status().isOk());
         mockMvc.perform(get("/comment/add?user=bob&content=hi"))
@@ -48,18 +48,20 @@ public class PhotoApplicationTests {
         String result = mockMvc.perform(get("/comments"))
             .andExpect(status().isOk())
             .andReturn().getResponse().getContentAsString();
-        Assert.isTrue(result.equals("[{\"user\":\"admin\",\"content\":\"hello\"},{\"user\":\"bob\",\"content\":\"hi\"}]"));
+        System.out.println(result);
+        Assert.isTrue(result.equals("[{\"id\":52,\"user\":\"admin\",\"content\":\"hello\"},{\"id\":53,\"user\":\"bob\",\"content\":\"hi\"}]"));
     }
 
     @Test
     @WithMockUser(username = "Rob", authorities = { "USER" })
-    public void testAddCommentToCurrentUser() throws Exception {
+    public void Testadd2Comment() throws Exception {
         mockMvc.perform(get("/comment/addToCurrentUser?content=yo"))
             .andExpect(status().isOk());
         String result = mockMvc.perform(get("/comments"))
             .andExpect(status().isOk())
             .andReturn().getResponse().getContentAsString();
-        Assert.isTrue(result.equals("[{\"user\":\"admin\",\"content\":\"hello\"},{\"user\":\"bob\",\"content\":\"hi\"},{\"user\":\"Rob\",\"content\":\"yo\"}]"));
+        System.out.println(result);
+        Assert.isTrue(result.equals("[{\"id\":52,\"user\":\"admin\",\"content\":\"hello\"},{\"id\":53,\"user\":\"bob\",\"content\":\"hi\"},{\"id\":54,\"user\":\"Rob\",\"content\":\"yo\"}]"));
     }
 
 }
