@@ -112,7 +112,7 @@ public class PhotoApplication {
      	 *
      	 * This modification allows us to attach comments to the currently logged in
      	 * user. Before, anyone could claim to be any user. This modification allows
-     	 * us to ensure that the Comment is attached to the currently loggedc in user
+     	 * us to ensure that the Comment is attached to the currently logged in user
      	 * that is sending the request.
      	 *
 	 * The Principal object will automatically be populated with an object
